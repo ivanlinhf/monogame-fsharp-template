@@ -24,4 +24,9 @@
     <Exec Command="dotnet tool restore" />
   </Target>
 
+  <Target Name="RunFantomas" BeforeTargets="Build">
+    <Message Text="Running Fantomas" Importance="High" />
+    <Exec Command="dotnet fantomas -r $(ProjectDir)" />
+  </Target>
+
 </Project>
