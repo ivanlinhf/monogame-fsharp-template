@@ -7,11 +7,11 @@ open Microsoft.Xna.Framework.Input
 type Game1() as x =
     inherit Game()
 
-    do x.Content.RootDirectory <- "Content"
-    do x.IsMouseVisible <- true
-
     let graphics = new GraphicsDeviceManager(x)
     let mutable spriteBatch = Unchecked.defaultof<SpriteBatch>
+
+    do x.Content.RootDirectory <- "Content"
+    do x.IsMouseVisible <- true
 
     override x.Initialize() =
         base.Initialize()
